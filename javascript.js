@@ -14,3 +14,7 @@ function getComputerChoice() {
         return "Error"
     }
 }
+
+function getPlayerChoice() {
+    return prompt("Please enter either Rock, Paper, or Scissors.");
+}
