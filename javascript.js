@@ -12,10 +12,6 @@ function getComputerChoice() {
   }
 }
 
-function getPlayerChoice() {
-  return prompt("Please enter either Rock, Paper, or Scissors.");
-}
-
 function playRound(playerSelection, computerSelection) {
   const computer = computerSelection;
   const player = playerSelection.toLowerCase();
