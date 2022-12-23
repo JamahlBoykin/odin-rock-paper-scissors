@@ -44,33 +44,3 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 }
-
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-
-  for (let i = 0; i < 5; i++) {
-    const outcome = playRound(getPlayerChoice(), getComputerChoice());
-    console.log(outcome);
-
-    if (outcome.includes("win")) {
-      playerScore++;
-    } else if (outcome.includes("lose")) {
-      computerScore++;
-    } else if (outcome.includes("tie")) {
-      i--;
-    }
-
-    if (playerScore === 3 || computerScore === 3) {
-        break;
-    }
-  }
-
-  if (playerScore > computerScore) {
-    console.log(`You won the best of five with a score of ${playerScore}-${computerScore}!`);
-  } else if (computerScore > playerScore) {
-    console.log(`You lost the best of five with a score of ${playerScore}-${computerScore}.`);
-  } else {
-    console.log(`Error. \nPlayer Score: ${playerScore} \nComputer Score: ${computerScore}`);
-  }
-}
