@@ -24,19 +24,26 @@ function playRound(playerSelection, computerSelection) {
     if (player === "paper") {
       return "You win! Paper beats Rock.";
     } else {
-      return "You lose! Rock beats Scissors.";
+      return "You lose! Scissors loses to Rock.";
     }
   } else if (computer === "Paper") {
     if (player === "scissors") {
       return "You win! Scissors beats Paper.";
     } else {
-      return "You lose! Paper beats Rock.";
+      return "You lose! Rock loses to Paper.";
     }
   } else if (computer === "Scissors") {
     if (player === "rock") {
       return "You win! Rock beats Scissors.";
     } else {
-      return "You lose! Scissors beats paper.";
+      return "You lose! Paper loses to Scissors.";
     }
   }
 }
+
+const buttons = document.querySelectorAll('.choice');
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    console.log(playRound(button.id, getComputerChoice()));
+  });
+});
